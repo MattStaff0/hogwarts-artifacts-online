@@ -6,12 +6,14 @@ import edu.tcu.cs.hogwartsartifactsonline.wizard.converter.WizardDtoToWizardConv
 import edu.tcu.cs.hogwartsartifactsonline.wizard.converter.WizardToWizardDtoConverter;
 import edu.tcu.cs.hogwartsartifactsonline.wizard.dto.WizardDto;
 import jakarta.validation.Valid;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
 @RestController
+@Transactional
 @RequestMapping("${api.endpoint.base-url}/wizards")
 public class WizardController {
 
